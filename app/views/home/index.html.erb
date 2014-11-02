@@ -1,2 +1,20 @@
 <h1>Home#index</h1>
 <h2>Welcome to Bitter</h2>
+<h3>A place to vent</h3>
+
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Body</th>
+  </tr>
+
+  <% @bits.each do |bit| %>
+    <tr>
+      <td><%= bit.author %></td>
+      <td><%= bit.body %></td>
+      <td><%= link_to 'Show', bit_path(bit) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'New bit', new_bits_path %>

@@ -3,11 +3,8 @@ Rails.application.routes.draw do
 
   get '/bits',            to: "bits#index",    as: :bits
   post '/bits',           to: "bits#create"
-  get '/bits/new',        to: "bits#new",      as: :new_bit
+  get '/bits/new',        to: "bits#new",      as: :new_bits
   get '/bits/:id',        to: "bits#show",     as: :bit
-
-
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
